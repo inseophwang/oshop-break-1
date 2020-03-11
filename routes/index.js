@@ -37,6 +37,7 @@ router.get('/page/:pageNumber', (req, res, next) => {
 
 router.get('/logout', (req, res) => {
   req.logout();
+  req.session.destroy()
   return res.redirect('/');
 });
 

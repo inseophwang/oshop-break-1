@@ -5,6 +5,7 @@ const getAllCategories = (req, res, next) => {
     if (err) return next(err);
     console.log(categories);
     res.locals.categories = categories;
+    next()
   });
 };
 
